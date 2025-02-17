@@ -1,0 +1,544 @@
+/* Futuristic Sci-Fi Theme */
+
+:root {
+    --bg: #0b1529;
+    --bgSoft: rgba(31, 48, 80, 0.3); /* Glassmorphism effect */
+    --text: #dee4eb;
+    --textSoft: #8eb4e6;
+    --neon: #00d9ff; /* Neon blue */
+    --glow: rgba(0, 217, 255, 0.8);
+  }
+  
+body {
+    background: radial-gradient(circle at center, rgba(13, 19, 40, 1), rgba(0, 0, 0, 1)),
+                url('https://www.transparenttextures.com/patterns/triangular.png'),
+                url('https://cdn.pixabay.com/photo/2016/09/07/22/10/space-1652822_960_720.jpg');
+    background-size: cover, auto;
+    background-position: center, center;
+    background-attachment: fixed, scroll;
+    animation: starfield 100s linear infinite, nebulaPulse 5s ease-in-out infinite;
+}
+
+@keyframes nebulaPulse {
+    0% { background-color: rgba(13, 19, 40, 1); }
+    50% { background-color: rgba(8, 8, 22, 0.7); }
+    100% { background-color: rgba(13, 19, 40, 1); }
+}
+
+@keyframes starfield {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 1000px;
+    }
+}
+
+
+/* Background Animation */
+@keyframes bgAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+  
+  .container {
+    max-width: 980px;
+    padding: 50px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+/* Light Mode */
+.light-mode {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 20%, rgba(230, 230, 230, 1) 100%);
+    color: var(--text);
+}
+
+.light-mode .navbar {
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+  
+
+  /* LIST ITEMS */
+  .list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.listItem {
+    background: rgba(0, 217, 255, 0.1); /* Almost transparent neon cyan */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 217, 255, 0.4); /* Soft neon border */
+    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: pulseBorder 3s infinite alternate, flicker 3s infinite;
+}
+
+/* Pulsating border animation */
+@keyframes pulseBorder {
+    0% {
+        border-color: rgba(0, 217, 255, 0.4);
+        box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    }
+    100% {
+        border-color: rgba(0, 217, 255, 0.9);
+        box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8);
+    }
+}
+
+/* Flickering glow effect */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    20% { opacity: 0.8; }
+    40% { opacity: 1; }
+    60% { opacity: 0.6; }
+    80% { opacity: 1; }
+}
+
+/* Scan lines effect */
+.listItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 217, 255, 0.1) 20%, 
+        transparent 40%, 
+        rgba(0, 217, 255, 0.1) 60%, 
+        transparent 80%
+    );
+    background-size: 100% 200%;
+    animation: scanLines 4s linear infinite;
+}
+
+/* Scan lines animation */
+@keyframes scanLines {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Hover effect for stronger glow */
+/* Hover effect for list items */
+.listItem {
+    position: relative; /* Ensure it is properly positioned */
+    overflow: hidden; /* Prevents unwanted overlapping */
+    transition: all 0.3s ease-in-out;
+}
+
+.listItemTitle {
+    position: relative;
+    z-index: 10; /* Ensures it's above any pseudo-elements */
+}
+
+/* Make the title link fully clickable */
+.listItemTitle a {
+    display: inline-block; /* Ensures proper clickability */
+    width: 100%; /* Makes the title take full width */
+    color: var(--neon); /* Always neon cyan */
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 0; /* Increases click area */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.listItemTitle a:hover {
+    color: var(--neon);
+    text-shadow: 0px 0px 10px var(--glow);
+}
+
+/* Ensure nothing overlaps the title */
+.listItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Prevents accidental blocking */
+    z-index: 1; /* Lower than the title */
+}
+
+/* Ensure image is below the text */
+.listItemImage {
+    position: relative;
+    z-index: 5; /* Below the title */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.listItem:hover .listItemImage {
+    transform: scale(1.05);
+}
+
+
+/* Description styling */
+.listItemDesc {
+    color: #b5effd;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Detail section */
+.listItemDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* Avatar image */
+.listItemDetail img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--neon);
+    box-shadow: 0px 0px 5px rgba(0, 217, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Slight zoom on avatar hover */
+.listItemDetail img:hover {
+    transform: scale(1.1);
+}
+
+/* Author name styling */
+.listItemDetail span {
+    color: #00aaff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+  
+  /* BUTTONS */
+  button {
+    background-color: transparent;
+    color: var(--neon);
+    border: 1px solid var(--neon);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: var(--neon);
+    color: var(--bg);
+    box-shadow: 0px 0px 15px var(--glow);
+  }
+  
+
+/* Single Post Page - Futuristic Sci-Fi Theme */
+
+.single {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 217, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.5);
+    animation: glowPulse 3s infinite alternate;
+}
+
+/* Glowing pulse effect */
+@keyframes glowPulse {
+    0% { box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.4); }
+    100% { box-shadow: 0px 0px 25px rgba(0, 217, 255, 0.9); }
+}
+
+/* Post Header */
+.singleHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 217, 255, 0.5);
+}
+
+/* Post Title */
+.singleHeadTitle {
+    font-size: 32px;
+    color: #00d9ff;
+    text-shadow: 0px 0px 15px rgba(0, 217, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+/* Post Description */
+.singleHeadDesc {
+    font-size: 18px;
+    color: #b5effd;
+    font-style: italic;
+    max-width: 80%;
+    margin: 0 auto 15px;
+}
+
+/* Post Meta Data */
+.singleHeadDetail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #8eb4e6;
+    margin-bottom: 10px;
+}
+
+.singleAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 217, 255, 0.7);
+    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.6);
+}
+
+/* Categories */
+.singleCategory {
+    background: rgba(0, 217, 255, 0.2);
+    color: #00aaff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.singleCategory:hover {
+    background: rgba(0, 217, 255, 0.5);
+    box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.7);
+}
+
+/* Date */
+time {
+    font-size: 14px;
+    color: #8eb4e6;
+    opacity: 0.8;
+}
+
+/* Post Image */
+.singleHeadImg {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+.singleHeadImg:hover {
+    transform: scale(1.02);
+}
+
+/* Post Bottom Section */
+.singleBottom {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Post Content */
+.singleContent {
+    flex: 3;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #dee4eb;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.4);
+}
+
+/* Sidebar */
+.singleRightBar {
+    flex: 1;
+    background: rgba(0, 217, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .singleBottom {
+        flex-direction: column;
+    }
+
+    .singleContent, .singleRightBar {
+        width: 100%;
+    }
+
+    .singleHeadTitle {
+        font-size: 28px;
+    }
+
+    .singleHeadDesc {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 217, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 217, 255, 0.4);
+    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+}
+
+.pagination a, .pagination span {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.pagination a:hover {
+    color: var(--neon);
+    text-shadow: 0px 0px 10px var(--glow);
+}
+
+.pagination .active {
+    color: var(--neon);
+    font-weight: bold;
+    text-shadow: 0px 0px 15px var(--glow);
+    border-bottom: 2px solid var(--neon);
+}
+
+/* Pulsating Effect */
+@keyframes pulsePagination {
+    0% { text-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5); }
+    100% { text-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8); }
+}
+
+.pagination .active {
+    animation: pulsePagination 1.5s infinite alternate;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(0, 217, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border-top: 1px solid rgba(0, 217, 255, 0.4);
+    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    text-align: center;
+}
+
+.footer a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.footer a:hover {
+    color: var(--neon);
+    text-shadow: 0px 0px 10px var(--glow);
+}
+
+/* Social Icons */
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(0, 217, 255, 0.1);
+    box-shadow: 0px 0px 5px rgba(0, 217, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+    background: var(--neon);
+    box-shadow: 0px 0px 15px var(--glow);
+}
+
+/* Pulsating Animation */
+@keyframes pulseFooter {
+    0% { text-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5); }
+    100% { text-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8); }
+}
+
+.footer a.active {
+    animation: pulseFooter 1.5s infinite alternate;
+}
+
+  
+  /* GSAP READY CLASSES */
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    .list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+#solar-system {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.info-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+}

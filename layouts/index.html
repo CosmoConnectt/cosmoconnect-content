@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Planet Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background: rgba(0, 0, 0, 0); /* Set background transparency to 0% */
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            height: calc(100vh - 120px); /* Adjusted for navbar and footer */
+            position: fixed;
+            left: 0;
+            top: 60px; /* Below the navbar */
+            transition: transform 0.3s ease;
+            overflow-y: scroll; /* Enable scrolling without scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            background: rgba(0, 0, 0, 0); /* Set background transparency to 0% */
+        }
+
+        .sidebar::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
+
+        .sidebar-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+
+        .planet-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60px;
+            height: 80px; /* Increased height to accommodate title */
+        }
+
+        .planet-icon model-viewer {
+            width: 50px;
+            height: 50px;
+        }
+
+        .planet-title {
+            font-size: 0.75rem; /* Small font size */
+            text-align: center;
+            margin-top: 5px;
+            color: white; /* Change font color to white */
+        }
+
+        /* Main content - Fullscreen 3D model */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 100px;
+            height: calc(100vh - 120px); /* Adjusted for navbar and footer */
+            position: relative;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Title and description styles */
+        .info-box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            max-width: 50ch; /* Restrict text to 50 characters */
+            word-wrap: break-word;
+        }
+
+        .info-box h1 {
+            font-size: 4rem; /* Double the previous size */
+            margin: 0;
+        }
+
+        .info-box p {
+            font-size: 1rem;
+            margin: 5px 0 0;
+            white-space: pre-line; /* Ensure line breaks */
+            font-style: italic; /* Italicize the description font */
+        }
+
+        footer {
+            height: 60px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: black; /* Ensure footer background is visible */
+            color: white; /* Ensure footer text is visible */
+        }
+
+        .quote {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.75rem;
+            color: white;
+            font-style: italic; /* Italicize the quote */
+        }
+
+        .quote .name {
+            font-size: 0.95rem; /* Increase font size of the name by 2 points (0.75rem + 2 points) */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        {{partial "navbar" .}}
+    </div>
+
+    <!-- Sidebar with Planet Icons -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content" id="sidebar-content">
+            <!-- Icons will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <model-viewer 
+            id="planet-viewer"
+            src="models/er1.glb"
+            alt="A 3D model of Earth"
+            ar
+            auto-rotate
+            camera-controls
+            shadow-intensity="1">
+        </model-viewer>
+
+        <!-- Title & Description -->
+        <div class="info-box">
+            <h1 id="planet-name">Earth</h1>
+            <p id="planet-desc">Earth is the third planet from the Sun and the only known celestial object to support life.</p>
+        </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote" style="position: fixed; bottom: 70px; right: 10px; text-align: right;">
+        website design and idea by <span class="name">Raina Tiwari</span>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        {{partial "footer" .}}
+    </div>
+
+    <script type="application/json" id="planet-data">
+        [
+            { "name": "Mercury", "model": "models/m1.glb", "desc": "Mercury is the smallest planet in our solar system and the closest to the Sun." },
+            { "name": "Venus", "model": "models/venus.glb", "desc": "Venus is the second planet from the Sun and has a thick, toxic atmosphere." },
+            { "name": "Earth", "model": "models/er1.glb", "desc": "Earth is the third planet from the Sun and the only known celestial object to support life." },
+            { "name": "Mars", "model": "models/mars.glb", "desc": "Mars is the fourth planet from the Sun and is often called the Red Planet." },
+            { "name": "Jupiter", "model": "models/jupiter.glb", "desc": "Jupiter is the largest planet in our solar system and has a Great Red Spot." },
+            { "name": "Saturn", "model": "models/s1.glb", "desc": "Saturn is the sixth planet from the Sun and is famous for its rings." },
+            { "name": "Uranus", "model": "models/uranus.glb", "desc": "Uranus is the seventh planet from the Sun and rotates on its side." },
+            { "name": "Neptune", "model": "models/neptune.glb", "desc": "Neptune is the eighth planet from the Sun and has strong winds." },
+            { "name": "Moon", "model": "models/moon.glb", "desc": "Earth's luminous satellite,shaping tides and night skies." },
+            { "name": "Sun", "model": "models/sun.glb", "desc": "A massive glowing star that sustains life on Earth." }
+
+
+        ]
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const planetDataElement = document.getElementById("planet-data");
+            let planets = [];
+
+            try {
+                planets = JSON.parse(planetDataElement.textContent);
+            } catch (error) {
+                console.error("Error parsing planet data:", error);
+                return;
+            }
+
+            const sidebar = document.getElementById("sidebar");
+            const sidebarContent = document.getElementById("sidebar-content");
+            const viewer = document.getElementById("planet-viewer");
+            const planetName = document.getElementById("planet-name");
+            const planetDesc = document.getElementById("planet-desc");
+            let sidebarTimer;
+
+            function hideSidebar() {
+                sidebar.classList.add('hidden');
+            }
+
+            function resetSidebarTimer() {
+                clearTimeout(sidebarTimer);
+                sidebarTimer = setTimeout(hideSidebar, 5000); // Auto-hide after 5 seconds
+            }
+
+            sidebar.addEventListener('mouseenter', () => {
+                clearTimeout(sidebarTimer); // Stop hiding when mouse is over sidebar
+            });
+
+            document.addEventListener('mousemove', (event) => {
+                if (event.clientX <= 10) {
+                    sidebar.classList.remove('hidden'); // Show sidebar when mouse is at left edge
+                } else {
+                    resetSidebarTimer(); // Reset auto-hide timer on mouse move
+                }
+            });
+
+            planets.forEach(planet => {
+                const button = document.createElement("button");
+                button.className = "planet-icon";
+                button.dataset.model = planet.model;
+                button.dataset.name = planet.name;
+                button.dataset.desc = planet.desc;
+
+                const icon = document.createElement("model-viewer");
+                icon.src = planet.model;
+                icon.alt = `${planet.name} icon`;
+                icon.style.width = "50px";
+                icon.style.height = "50px";
+                icon.setAttribute("disable-zoom", "");
+
+                const title = document.createElement("span");
+                title.className = "planet-title";
+                title.textContent = planet.name;
+
+                button.appendChild(icon);
+                button.appendChild(title);
+
+                button.addEventListener("click", function () {
+                    viewer.setAttribute("src", this.dataset.model);
+                    planetName.textContent = this.dataset.name;
+
+                    // Wrap text into multiple lines with max 50 chars
+                    let wrappedText = this.dataset.desc.match(/.{1,50}/g).join("\n");
+                    planetDesc.textContent = wrappedText;
+                });
+
+                sidebarContent.appendChild(button);
+            });
+
+            resetSidebarTimer(); // Start auto-hide timer
+        });
+      </script>
+
+</body>
+</html>

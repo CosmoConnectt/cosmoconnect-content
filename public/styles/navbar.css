@@ -1,0 +1,241 @@
+/* ========================= */
+/*       Navbar Styles       */
+/* ========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Remove background */
+    padding: 15px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 60px;
+    z-index: 1002; /* Keeps navbar above search results */
+}
+
+/* Logo Styling */
+.logo a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+    margin-right: 15px;
+    position: relative;
+}
+
+.links a:hover {
+    color: #00ff00; /* Neon green hover effect */
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #00ff00; /* Neon green underline */
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #00ff00; /* Neon green underline */
+}
+
+.links a.active, .links a[aria-current="page"] {
+    color: #00ff00; /* Neon green active link */
+}
+
+.links a.active::after, .links a[aria-current="page"]::after {
+    width: 100%;
+    left: 0;
+    background: #00ff00; /* Neon green underline */
+}
+
+/* ========================= */
+/*       Search Bar         */
+/* ========================= */
+/* Remove search container styles */
+#search-container {
+    display: none;
+}
+
+/* Style the search results dropdown */
+#search-results {
+    position: absolute;
+    top: 100%; /* Align results at the bottom of the search box */
+    left: 0;
+    width: 100%;
+    background: rgba(211, 211, 211, 0.5); /* Light grey with 50% transparency */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-height: 200px; /* Change height to 200px */
+    overflow-y: auto;
+    display: none;
+    z-index: 1100;
+    padding: 5px;
+    border: 1px solid #ffffff; /* White border */
+}
+
+/* Individual search result items */
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    cursor: pointer;
+    background: white;
+}
+
+.search-result-item img {
+    width: 40px; /* Thumbnail size */
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.search-result-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ensure "Load More" button is styled correctly */
+.load-more {
+    text-align: center;
+    padding: 10px;
+    background: #f8f8f8;
+    font-weight: bold;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+}
+
+.load-more:hover {
+    background: #e0e0e0;
+}
+
+/* Prevent search results from overflowing outside navbar */
+.navbar {
+    position: relative;
+    z-index: 1002; /* Keeps navbar above content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #search-container {
+        width: 100%;
+        max-width: 180px; /* Reduced size */
+    }
+
+    #search-results {
+        width: 100%;
+        max-width: 180px; /* Reduced size */
+    }
+}
+
+/* Reduce search bar font size, padding, height, add rounded corners, and remove background */
+#search-container input {
+    font-size: 0.875rem; /* Reduced font size */
+    padding: 5px 5px; /* Reduced padding */
+    height: 30px; /* Reduced height */
+    border-radius: 15px; /* Rounded corners */
+    background: none; /* Remove background */
+}
+
+/* Search Box Styles */
+#search-container {
+    position: absolute;
+    right: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    font-size: 0.875rem; /* Reduced font size */
+    padding: 5px 5px; /* Reduced padding */
+    height: 30px; /* Reduced height */
+    border-radius: 15px; /* Rounded corners */
+    background: transparent; /* Transparent background */
+    border: 1px solid #ffffff; /* White border */
+    color: #ffffff; /* White text color */
+}
+
+#search::placeholder {
+    color: #8eb4e6; /* Soft text color for placeholder */
+}
+
+#search-results {
+    position: absolute;
+    top: 100%; /* Align results at the bottom of the search box */
+    left: 0;
+    width: 100%;
+    background: rgba(211, 211, 211, 0.5); /* Light grey with 50% transparency */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-height: 200px; /* Change height to 200px */
+    overflow-y: auto;
+    display: none;
+    z-index: 1100;
+    padding: 5px;
+    border: 1px solid #ffffff; /* White border */
+}
+
+/* Search Result Item Styles */
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-result-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-result-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-result-title {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search-result-title:hover {
+    text-decoration: underline;
+}
+
+.search-result-excerpt {
+    color: #8eb4e6;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Show search results container when there are results */
+#search-results:not(:empty) {
+    display: block;
+}

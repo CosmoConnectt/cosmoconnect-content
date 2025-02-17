@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="list-grid">
+    {{ range .Paginator.Pages }}
+    <div class="listItem">
+        <!-- Moved <a> outside <h1> for better clickability -->
+        <a href="{{ .RelPermalink }}" class="listItemTitle">
+            <h1>{{ .Title }}</h1>
+        </a>
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="listItemImage" loading="lazy">
+        {{ end }}
+        <p class="listItemDesc">{{ .Params.description }}</p>
+        <div class="listItemDetail">
+            {{ if .Params.avatar }}
+            <img src="{{ .Params.avatar }}" loading="lazy" alt="Author Avatar">
+            {{ end }}
+            <span>
+                {{ range (.GetTerms "authors") }}
+                <a href="{{ .Permalink }}">{{ .Name }}</a>
+                {{ end }}
+            </span>
+            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+        </div>
+    </div>
+    {{ end }} 
+</div>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}

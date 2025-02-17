@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on CosmoConnect</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on CosmoConnect</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2025 17:58:11 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>General</title>
+      <link>http://localhost:1313/categories/general/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/categories/general/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kids</title>
+      <link>http://localhost:1313/categories/kids/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/categories/kids/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Moon</title>
+      <link>http://localhost:1313/categories/moon/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/categories/moon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solar System</title>
+      <link>http://localhost:1313/categories/solar-system/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/categories/solar-system/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space</title>
+      <link>http://localhost:1313/categories/space/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/categories/space/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

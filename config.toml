@@ -1,0 +1,6 @@
+# ...existing code...
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# ...existing code...

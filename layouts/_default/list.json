@@ -1,0 +1,12 @@
+{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) -}}
+[
+  {{- range $index, $page := $paginator.Pages -}}
+    {{- if $index }},{{ end -}}
+    {
+      "title": {{ $page.Title | jsonify }},
+      "url": {{ $page.Permalink | jsonify }},
+      "content": {{ $page.Plain | jsonify }},
+      "image": {{ with $page.Params.images }}{{ index . 0 | jsonify }}{{ else }}null{{ end }}
+    }
+  {{- end -}}
+]

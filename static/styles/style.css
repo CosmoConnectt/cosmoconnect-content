@@ -1,0 +1,412 @@
+:root {
+  --bg: #0b1529;
+  --bgSoft: #1f3050;
+  --text: #dee4eb;
+  --textSoft: #cbd2d9;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, rgba(14, 23, 42, 0.9) 20%, rgba(5, 10, 20, 1) 100%);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+
+body.light {
+  --bg: #dee4eb;
+  --text: #0b1529;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 980px; /* Adjust as needed */
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* NAVBAR START */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bgSoft);
+  color: var(--textSoft);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--bgSoft);
+  border: 0.5px solid var(--textSoft);
+  padding: 5px;
+  position: relative;
+}
+
+.ball {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  background-color: var(--textSoft);
+  border: 1px solid var(--bgSoft);
+}
+
+.light .ball {
+  left: unset;
+  right: 0;
+}
+
+/* NAVBAR END */
+
+/* FOOTER START */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  font-size: 14px;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+/* FOOTER END */
+
+/* LIST GRID START */
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 15px; /* Reduced gap */
+}
+
+/* Individual List Items */
+.listItem {
+  background-color: var(--bgSoft);
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Image - Square */
+.listItemImage {
+  width: 100%;
+  height: 180px; /* Reduced height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Title */
+.listItemTexts h1 {
+  margin-top: 8px; /* Slightly reduced margin */
+  font-size: 16px; /* Adjusted for better scaling */
+  font-weight: bold;
+}
+
+/* Description */
+.listItemDesc {
+  font-size: 14px;
+  color: var(--textSoft);
+  margin-top: 4px;
+}
+
+/* Avatar & Date - Aligned Properly */
+.listItemDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 8px; /* Slightly reduced */
+}
+
+/* Avatar */
+.listItemDetail img {
+  width: 30px; /* Slightly reduced */
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Date */
+.listItemDetail time {
+  font-size: 13px;
+  color: var(--textSoft);
+}
+
+/* Categories */
+.listItemCategories {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap; /* Allow wrapping if there are too many categories */
+  padding: 8px;
+  /* border: 1px solid var(--textSoft); /* Border box */
+  /* border-radius: 5px; */
+  background-color: var(--bgSoft);
+}
+
+.listItemCategory {
+  padding: 4px 10px; /* Padding adjusted for better spacing */
+  border-radius: 5px;
+  background-color: var(--bg);
+  color: var(--textSoft);
+  font-size: 13px;
+  border: 1px solid var(--textSoft); /* Optional: border for each category */
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.page-item {
+  border: 1px solid gray;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.page-item.active {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.page-item.disabled {
+  background-color: #313845;
+  cursor: not-allowed;
+}
+
+/* LIST END */
+/* SINGLE START */
+
+.singleHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.singleHeadTexts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.singleHeadTitle {
+  font-size: 48px;
+}
+
+.singleHeadDesc {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.singleHeadDetail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.singleAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.singleCategory {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--bgSoft);
+  color: var(--textSoft);
+  font-size: 14px;
+}
+
+.singleHeadImg {
+  flex: 1;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.singleBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.singleContent {
+  flex: 3;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.singleContent p,
+.singleContent h1,
+.singleContent h2,
+.singleContent h3 {
+  margin: 20px 0px;
+}
+
+.singleContent img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.singleContent pre {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.singleRightBar {
+  flex: 1;
+}
+
+/* SINGLE END */
+/* Styling for the right bar */
+.rightBar {
+  background-color: var(--bgSoft);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the Categories list */
+.rightBar .categoriesList h3 {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid var(--bg);
+  padding-bottom: 5px;
+}
+
+/* Categories list style */
+.rightBar .categoriesList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rightBar .categoriesList ul li {
+  margin-bottom: 8px;
+}
+
+/* Category link styling */
+.rightBar .categoriesList ul li a {
+  text-decoration: none;
+  color: var(--textSoft);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.rightBar .categoriesList ul li a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Add a little spacing and padding to the rightBar images */
+.rightBarImg, .rightBarImgHr {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Optional: For the images in rightBar if needed */
+.rightBarImg {
+  margin-bottom: 15px;
+}
+
+.rightBarImgHr {
+  margin-top: 15px;
+}
+
+/*Search*/
+
+/*Search End*/
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+  }
+  .links {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}

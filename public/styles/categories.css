@@ -1,0 +1,160 @@
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.listItem {
+    background: rgba(0, 217, 255, 0.1); /* Almost transparent neon cyan */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 217, 255, 0.4); /* Soft neon border */
+    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: pulseBorder 3s infinite alternate, flicker 3s infinite;
+}
+
+/* Pulsating border animation */
+@keyframes pulseBorder {
+    0% {
+        border-color: rgba(0, 217, 255, 0.4);
+        box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    }
+    100% {
+        border-color: rgba(0, 217, 255, 0.9);
+        box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8);
+    }
+}
+
+/* Flickering glow effect */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    20% { opacity: 0.8; }
+    40% { opacity: 1; }
+    60% { opacity: 0.6; }
+    80% { opacity: 1; }
+}
+
+/* Scan lines effect */
+.listItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 217, 255, 0.1) 20%, 
+        transparent 40%, 
+        rgba(0, 217, 255, 0.1) 60%, 
+        transparent 80%
+    );
+    background-size: 100% 200%;
+    animation: scanLines 4s linear infinite;
+}
+
+/* Scan lines animation */
+@keyframes scanLines {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Hover effect for stronger glow */
+/* Hover effect for list items */
+.listItem {
+    position: relative; /* Ensure it is properly positioned */
+    overflow: hidden; /* Prevents unwanted overlapping */
+    transition: all 0.3s ease-in-out;
+}
+
+.listItemTitle {
+    position: relative;
+    z-index: 10; /* Ensures it's above any pseudo-elements */
+}
+
+/* Make the title link fully clickable */
+.listItemTitle a {
+    display: inline-block; /* Ensures proper clickability */
+    width: 100%; /* Makes the title take full width */
+    color: var(--neon); /* Always neon cyan */
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 0; /* Increases click area */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.listItemTitle a:hover {
+    color: var(--neon);
+    text-shadow: 0px 0px 10px var(--glow);
+}
+
+/* Ensure nothing overlaps the title */
+.listItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Prevents accidental blocking */
+    z-index: 1; /* Lower than the title */
+}
+
+/* Ensure image is below the text */
+.listItemImage {
+    position: relative;
+    z-index: 5; /* Below the title */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.listItem:hover .listItemImage {
+    transform: scale(1.05);
+}
+
+
+/* Description styling */
+.listItemDesc {
+    color: #b5effd;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Detail section */
+.listItemDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* Avatar image */
+.listItemDetail img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--neon);
+    box-shadow: 0px 0px 5px rgba(0, 217, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Slight zoom on avatar hover */
+.listItemDetail img:hover {
+    transform: scale(1.1);
+}
+
+/* Author name styling */
+.listItemDetail span {
+    color: #00aaff;
+    font-size: 14px;
+    font-weight: bold;
+}

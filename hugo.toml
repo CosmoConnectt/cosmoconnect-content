@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'CosmoConnect'
+
+[pagination]
+pagerSize = 6
+
+
+[params]
+  description = "The fastest blog"
+  dateFormat = "Jan 2, 2006"
+
+[taxonomies]
+  category = "categories"
+  author= "authors"
+
+[mediaTypes]
+  [mediaTypes."model/gltf-binary"]
+    suffixes = ["glb"]
+
+[outputFormats]
+  [outputFormats.GLB]
+    mediaType = "model/gltf-binary"
+    isPlainText = false
+

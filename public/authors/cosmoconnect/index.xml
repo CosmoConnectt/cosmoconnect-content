@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CosmoConnect</title>
+    <link>http://localhost:1313/authors/cosmoconnect/</link>
+    <description>Recent content on CosmoConnect</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2025 17:58:11 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/authors/cosmoconnect/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moon</title>
+      <link>http://localhost:1313/posts/moon/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/moon/</guid>
+      <description>&lt;h1 id=&#34;the-moon-earths-only-natural-satellite&#34;&gt;The Moon: Earth&amp;rsquo;s Only Natural Satellite&lt;/h1&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Moon&lt;/strong&gt; is the Earth&amp;rsquo;s only natural satellite, and it has fascinated humanity for centuries. It plays a significant role in both our planet&amp;rsquo;s environment and in human culture. Below is an overview of the Moon&amp;rsquo;s most important aspects.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-physical-characteristics&#34;&gt;1. &lt;strong&gt;Physical Characteristics&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The Moon is the fifth-largest natural satellite in the Solar System and is approximately 1/4th the size of Earth. It has a diameter of about &lt;strong&gt;3,474 km&lt;/strong&gt;. The Moon&amp;rsquo;s gravity is about &lt;strong&gt;1/6th&lt;/strong&gt; that of Earth&amp;rsquo;s, which is why astronauts appear to weigh much less on the Moon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moon1</title>
+      <link>http://localhost:1313/posts/moon1/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/moon1/</guid>
+      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moon2</title>
+      <link>http://localhost:1313/posts/moon2/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/moon2/</guid>
+      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moon3</title>
+      <link>http://localhost:1313/posts/abc/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/abc/</guid>
+      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moon3</title>
+      <link>http://localhost:1313/posts/abcd/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/abcd/</guid>
+      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moon3</title>
+      <link>http://localhost:1313/posts/abcdef/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/abcdef/</guid>
+      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moon3</title>
+      <link>http://localhost:1313/posts/moon3/</link>
+      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <guid>http://localhost:1313/posts/moon3/</guid>
+      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
