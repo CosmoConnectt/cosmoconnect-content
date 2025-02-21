@@ -24,6 +24,159 @@
         
 <head>
     <link rel="stylesheet" href="/styles/futuristic-style.css">
+    <style>
+        .listItem, .listItemTitle, .listItemDesc, .listItemDetail, .listItemDetail span, .listItemDetail time {
+            font-family: Arial, sans-serif;  
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left-section {
+            width: 20%;  
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;  
+            gap: 50px;  
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            max-height: calc(100vh - 120px);  
+            overflow-y: auto;  
+        }
+        .right-section {
+            width: calc(100% - 20% - 70px);  
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: 50px;  
+            margin-left: calc(20% + 70px);  
+        }
+        .listItemDesc {
+            position: absolute;
+            bottom: 50px;  
+            right: 10px;
+            text-align: right;
+            font-size: 14px;  
+            padding-left: 50px;  
+        }
+        .listItemDetail {
+            font-size: 0.50em;  
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            text-align: left;
+            gap: 20px;
+        }
+        .listItemDetail img {
+            width: 20px;  
+            height: 20px;  
+            border-radius: 50%;
+        }
+        .listItem a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            text-decoration: none;
+        }
+        .listItemDetail .author {
+            display: flex;
+            align-items: center;
+            gap: 10px;  
+        }
+        .categories {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;  
+        }
+        .categories a {
+            font-family: Arial, sans-serif;  
+            background: rgba(255, 255, 255, 0.2);  
+            color: white;  
+            padding: 5px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        .categories a:hover {
+            background: rgba(255, 255, 255, 0.5);  
+        }
+        .pagination {
+            width: calc(80% - 40px);  
+            margin: 0 20px;  
+            overflow-x: hidden;  
+        }
+
+         
+        @media (max-width: 1200px) {
+            .left-section {
+                width: 25%;  
+                max-height: calc(100vh - 120px);  
+            }
+            .right-section {
+                width: calc(100% - 25% - 70px);  
+                grid-template-columns: repeat(3, 1fr);  
+            }
+        }
+        @media (max-width: 768px) {
+            .left-section {
+                width: 30%;  
+                max-height: calc(100vh - 120px);  
+            }
+            .right-section {
+                width: calc(100% - 30% - 70px);  
+                grid-template-columns: repeat(2, 1fr);  
+            }
+        }
+        @media (max-width: 480px) {
+            .left-section {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                position: static;
+                max-height: 400px;
+                overflow-y: visible;
+            }
+            .right-section {
+                width: 100%;
+                margin-left: 0;
+                grid-template-columns: 1fr;  
+            }
+            .site-title {
+                display: block;  
+            }
+        }
+        @media (min-width: 481px) {
+            .site-title {
+                display: none;  
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbar = document.querySelector(".navbar");
+            const siteTitle = document.querySelector(".site-title");
+
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 100) {
+                    siteTitle.style.display = "block";
+                } else {
+                    siteTitle.style.display = "none";
+                }
+            });
+        });
+    </script>
 </head>
 <body style="background-color: rgba(0, 0, 0, 0);">
     <!DOCTYPE html>
@@ -57,98 +210,22 @@
 </body>
 </html>
 
-    <div class="list-grid">
-        
-        <div class="listItem" style="background: rgba(0, 0, 0, 0); border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
-            
-            <a href="/posts/thesolarsystem/" class="listItemTitle">
-                <h1>The Solar System</h1>
-            </a>
-            
-            <img src="/images/solar1.jpg" alt="The Solar System" class="listItemImage" loading="lazy">
-            
-            <p class="listItemDesc">An overview of the Solar System.</p>
-            <div class="listItemDetail">
-                
-                <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
-                
-                <span>
-                    
-                    <a href="http://localhost:1313/authors/cosmoconnect/">CosmoConnect</a>
-                    
-                </span>
-                <time>Feb 18, 2025</time>
+    <div class="content-wrapper">
+        <div class="left-section">
+            <div class="site-title" style="margin-bottom: 20px; display: none;">
+                <a href="/" style="color: white; text-align: center; text-decoration: none;">
+                    <h1>CosmoConnect</h1>
+                </a>
             </div>
-        </div>
-        
-        <div class="listItem" style="background: rgba(0, 0, 0, 0); border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
-            
-            <a href="/posts/thesun/" class="listItemTitle">
-                <h1>The Sun</h1>
-            </a>
-            
-            <img src="/images/sun.jpg" alt="The Sun" class="listItemImage" loading="lazy">
-            
-            <p class="listItemDesc">The Sun is the center of the Solar System, providing energy and light.</p>
-            <div class="listItemDetail">
+            <div class="categories">
                 
-                <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
+                <a href="http://localhost:1313/categories/general/">General</a>
                 
-                <span>
-                    
-                    <a href="http://localhost:1313/authors/cosmoconnect/">CosmoConnect</a>
-                    
-                </span>
-                <time>Feb 18, 2025</time>
+                <a href="http://localhost:1313/categories/the-solar-system/">The Solar System</a>
+                
             </div>
-        </div>
-        
-        <div class="listItem" style="background: rgba(0, 0, 0, 0); border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
-            
-            <a href="/posts/uranus/" class="listItemTitle">
-                <h1>Uranus</h1>
-            </a>
-            
-            <img src="/images/uranus.jpg" alt="Uranus" class="listItemImage" loading="lazy">
-            
-            <p class="listItemDesc">Uranus is an ice giant with a unique tilted rotation.</p>
-            <div class="listItemDetail">
+            <div class="pagination-wrapper">
                 
-                <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
-                
-                <span>
-                    
-                    <a href="http://localhost:1313/authors/cosmoconnect/">CosmoConnect</a>
-                    
-                </span>
-                <time>Feb 18, 2025</time>
-            </div>
-        </div>
-        
-        <div class="listItem" style="background: rgba(0, 0, 0, 0); border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
-            
-            <a href="/posts/venus/" class="listItemTitle">
-                <h1>Venus</h1>
-            </a>
-            
-            <img src="/images/venus.jpg" alt="Venus" class="listItemImage" loading="lazy">
-            
-            <p class="listItemDesc">Venus is similar in size and composition to Earth but has a toxic atmosphere.</p>
-            <div class="listItemDetail">
-                
-                <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
-                
-                <span>
-                    
-                    <a href="http://localhost:1313/authors/cosmoconnect/">CosmoConnect</a>
-                    
-                </span>
-                <time>Feb 18, 2025</time>
-            </div>
-        </div>
-         
-    </div>
-    
     <ul class="pagination pagination-default">
       <li class="page-item">
         <a href="/authors/cosmoconnect/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -169,14 +246,76 @@
         <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
-    <div class="footer" style="width: 100%; text-align: center;">
-    <div class="footerLinks" style="color: white;">
+            </div>
+        </div>
+        <div class="right-section">
+            
+            <div class="listItem" style="width: 250px; height: 300px; background: url('/images/solar1.jpg') no-repeat center center; background-size: cover; border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
+                <a href="/posts/thesolarsystem/"></a>
+                <div class="listItemTitle" style="position: absolute; top: 10px; left: 10px;">
+                    <h1 style="color: white; font-size: 24px; text-transform: capitalize;">The Solar System</h1>
+                </div>
+                <p class="listItemDesc">An overview of the Solar System.</p>
+                <div class="listItemDetail">
+                    
+                    <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
+                    
+                    <time>Feb 18, 2025</time>
+                </div>
+            </div>
+            
+            <div class="listItem" style="width: 250px; height: 300px; background: url('/images/sun.jpg') no-repeat center center; background-size: cover; border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
+                <a href="/posts/thesun/"></a>
+                <div class="listItemTitle" style="position: absolute; top: 10px; left: 10px;">
+                    <h1 style="color: white; font-size: 24px; text-transform: capitalize;">The Sun</h1>
+                </div>
+                <p class="listItemDesc">The Sun is the center of the Solar System, providing energy and light.</p>
+                <div class="listItemDetail">
+                    
+                    <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
+                    
+                    <time>Feb 18, 2025</time>
+                </div>
+            </div>
+            
+            <div class="listItem" style="width: 250px; height: 300px; background: url('/images/uranus.jpg') no-repeat center center; background-size: cover; border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
+                <a href="/posts/uranus/"></a>
+                <div class="listItemTitle" style="position: absolute; top: 10px; left: 10px;">
+                    <h1 style="color: white; font-size: 24px; text-transform: capitalize;">Uranus</h1>
+                </div>
+                <p class="listItemDesc">Uranus is an ice giant with a unique tilted rotation.</p>
+                <div class="listItemDetail">
+                    
+                    <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
+                    
+                    <time>Feb 18, 2025</time>
+                </div>
+            </div>
+            
+            <div class="listItem" style="width: 250px; height: 300px; background: url('/images/venus.jpg') no-repeat center center; background-size: cover; border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
+                <a href="/posts/venus/"></a>
+                <div class="listItemTitle" style="position: absolute; top: 10px; left: 10px;">
+                    <h1 style="color: white; font-size: 24px; text-transform: capitalize;">Venus</h1>
+                </div>
+                <p class="listItemDesc">Venus is similar in size and composition to Earth but has a toxic atmosphere.</p>
+                <div class="listItemDetail">
+                    
+                    <img src="/images/avatar.webp" loading="lazy" alt="Author Avatar">
+                    
+                    <time>Feb 18, 2025</time>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+    <div class="footer" style="width: 100%; text-align: center; padding: 10px 0;">
+    <div class="footerLinks" style="color: white; font-size: 0.9em;">
       <a href="/" style="color: white;">CosmoConnect</a> |
       <a href="/categories" style="color: white;">categories</a> |
       <a href="/sitemap.xml" style="color: white;">Sitemap</a>
     </div>
     <div class="social" style="position: absolute; bottom: 10px; right: 10px;">
-      <a href="https://youtube.com/lamadev">
+      <a href="https://youtube.com">
         <svg
           width="20"
           zoomAndPan="magnify"
@@ -206,7 +345,7 @@
             d="M 25.289062 14.746094 C 25.289062 16.351562 25.289062 18.050781 24.933594 19.605469 C 24.679688 20.703125 23.785156 21.503906 22.707031 21.625 C 20.15625 21.910156 17.570312 21.914062 15.003906 21.910156 C 12.429688 21.910156 9.851562 21.910156 7.300781 21.625 C 6.222656 21.503906 5.324219 20.703125 5.074219 19.605469 C 4.714844 18.050781 4.714844 16.351562 4.714844 14.746094 C 4.714844 13.140625 4.71875 11.4375 5.074219 9.882812 C 5.324219 8.789062 6.21875 7.984375 7.300781 7.863281 C 9.851562 7.578125 12.433594 7.578125 15.003906 7.578125 C 17.570312 7.578125 20.152344 7.578125 22.707031 7.863281 C 23.78125 7.984375 24.679688 8.789062 24.933594 9.882812 C 25.289062 11.4375 25.289062 13.140625 25.289062 14.746094 Z M 25.289062 14.746094 "
               fill-opacity="1"
               fill-rule="nonzero"
-            />
+          />
           <path
             fill="#e52d27"
             d="M 12.835938 10.917969 L 12.835938 18.609375 L 18.808594 14.761719 Z M 12.835938 10.917969 "
@@ -215,7 +354,7 @@
           />
         </svg>
       </a>
-      <a href="https://www.facebook.com/groups/lamadev" aria-label="Facebook">
+      <a href="https://www.facebook.com" aria-label="Facebook">
         <svg
           width="20"
           zoomAndPan="magnify"
@@ -248,7 +387,7 @@
           />
         </svg>
       </a>
-      <a href="https://twitter.com/lamawebdev" aria-label="Twitter">
+      <a href="https://twitter.com" aria-label="Twitter">
         <svg
           width="20"
           zoomAndPan="magnify"
@@ -276,12 +415,12 @@
           <path
             fill="#ffffff"
             d="M 11.632812 21.890625 C 18.476562 21.890625 22.222656 16.214844 22.222656 11.300781 C 22.222656 11.140625 22.222656 10.980469 22.214844 10.820312 C 22.941406 10.300781 23.570312 9.640625 24.074219 8.890625 C 23.40625 9.1875 22.6875 9.382812 21.929688 9.480469 C 22.699219 9.023438 23.289062 8.289062 23.570312 7.417969 C 22.851562 7.847656 22.054688 8.152344 21.207031 8.316406 C 20.523438 7.59375 19.558594 7.140625 18.492188 7.140625 C 16.4375 7.140625 14.769531 8.8125 14.769531 10.867188 C 14.769531 11.15625 14.804688 11.4375 14.863281 11.714844 C 11.769531 11.5625 9.027344 10.074219 7.191406 7.824219 C 6.871094 8.375 6.691406 9.015625 6.691406 9.695312 C 6.691406 10.988281 7.351562 12.128906 8.34375 12.796875 C 7.734375 12.773438 7.160156 12.605469 6.660156 12.332031 C 6.660156 12.347656 6.660156 12.359375 6.660156 12.382812 C 6.660156 14.183594 7.945312 15.691406 9.644531 16.03125 C 9.332031 16.121094 9.003906 16.164062 8.664062 16.164062 C 8.425781 16.164062 8.191406 16.140625 7.96875 16.097656 C 8.4375 17.578125 9.816406 18.652344 11.445312 18.683594 C 10.167969 19.683594 8.5625 20.277344 6.820312 20.277344 C 6.523438 20.277344 6.226562 20.265625 5.933594 20.226562 C 7.574219 21.273438 9.535156 21.890625 11.632812 21.890625 "
-            fill-opacity="1"
-            fill-rule="nonzero"
+              fill-opacity="1"
+              fill-rule="nonzero"
           />
         </svg>
       </a>
-      <a href="https://discord.gg/yKremu4mPr" aria-label="Discord">
+      <a href="https://discord.gg" aria-label="Discord">
         <svg
           width="20"
           zoomAndPan="magnify"
