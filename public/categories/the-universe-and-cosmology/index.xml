@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Universe and Cosmology on CosmoConnect</title>
+    <link>http://localhost:1313/categories/the-universe-and-cosmology/</link>
+    <description>Recent content in The Universe and Cosmology on CosmoConnect</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/the-universe-and-cosmology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dark Energy: The Force Behind Cosmic Expansion</title>
+      <link>http://localhost:1313/posts/darkenergy/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/darkenergy/</guid>
+      <description>&lt;p&gt;Dark energy is an unknown force that makes up about 68% of the universe and is responsible for its accelerated expansion. Unlike dark matter, which adds to the gravitational pull in the universe, dark energy works against gravity, pushing galaxies apart at an increasing rate.&lt;/p&gt;&#xA;&lt;p&gt;The existence of dark energy was first discovered in the late 1990s when astronomers studying distant supernovae found that their light was fainter than expected. This suggested that the universe’s expansion was speeding up rather than slowing down due to gravity. This discovery was groundbreaking and earned the 2011 Nobel Prize in Physics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dark Matter: The Invisible Mass of the Universe</title>
+      <link>http://localhost:1313/posts/darkmatter/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/darkmatter/</guid>
+      <description>&lt;p&gt;Dark matter is one of the greatest mysteries in modern astrophysics. It is an invisible, unknown form of matter that does not emit, absorb, or reflect light, making it undetectable through conventional telescopes. Despite this, its presence is inferred from its gravitational effects on galaxies and large-scale cosmic structures.&lt;/p&gt;&#xA;&lt;p&gt;The concept of dark matter was first proposed in the 1930s by Fritz Zwicky, who noticed that galaxy clusters were moving too fast to be held together by visible matter alone. Later observations of galaxy rotation curves by Vera Rubin in the 1970s provided further evidence that an unseen mass was influencing their movement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Big Bang: Birth of the Universe</title>
+      <link>http://localhost:1313/posts/thebigbangbirthoftheuniverse/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/thebigbangbirthoftheuniverse/</guid>
+      <description>&lt;p&gt;The Big Bang Theory is the leading explanation for the origin of the universe. It suggests that approximately 13.8 billion years ago, the universe began as an infinitely small, hot, and dense point known as a singularity. This singularity rapidly expanded in a process called cosmic inflation, giving rise to all the matter and energy that make up the universe.&lt;/p&gt;&#xA;&lt;p&gt;As the universe expanded, it cooled, allowing subatomic particles to form. Within minutes, the first atomic nuclei emerged, primarily hydrogen and helium. Around 380,000 years after the Big Bang, the universe cooled enough for electrons to combine with nuclei, forming neutral atoms. This event, known as recombination, allowed light to travel freely, creating the cosmic microwave background (CMB), the oldest light in the universe.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

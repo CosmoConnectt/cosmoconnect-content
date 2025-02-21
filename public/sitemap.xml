@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/posts/apollomoonlanding/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/authors/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
@@ -14,13 +17,34 @@
     <loc>http://localhost:1313/authors/cosmoconnect/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/darkenergy/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/darkmatter/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/earth/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/firsthumaninspace/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/general/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/hubblespacetelescope/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/internationalspacestationiss/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/jwst/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/jupiter/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/marsrover/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/mercury/</loc>
@@ -29,13 +53,34 @@
     <loc>http://localhost:1313/posts/neptune/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/perseveranceroverandthesearchforlifeonmars/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/saturn/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/space-exploration/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/space-fun-facts/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/spaceinmovies/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/space-in-popular-culture/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/artemis/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/astroidbelt/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/thebigbangbirthoftheuniverse/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/the-solar-system/</loc>
@@ -47,10 +92,22 @@
     <loc>http://localhost:1313/posts/thesun/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/the-universe-and-cosmology/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/uranus/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/venus/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/voyager/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/voyager2/</loc>
+    <lastmod>2025-02-18T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/weirdbuttruefacts/</loc>
     <lastmod>2025-02-18T12:00:00+00:00</lastmod>
   </url>
 </urlset>

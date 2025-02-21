@@ -16,10 +16,38 @@
       <description></description>
     </item>
     <item>
+      <title>Space Exploration</title>
+      <link>http://localhost:1313/categories/space-exploration/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/space-exploration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space Fun Facts</title>
+      <link>http://localhost:1313/categories/space-fun-facts/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/space-fun-facts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space in Popular Culture</title>
+      <link>http://localhost:1313/categories/space-in-popular-culture/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/space-in-popular-culture/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>The Solar System</title>
       <link>http://localhost:1313/categories/the-solar-system/</link>
       <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/the-solar-system/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The Universe and Cosmology</title>
+      <link>http://localhost:1313/categories/the-universe-and-cosmology/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/the-universe-and-cosmology/</guid>
       <description></description>
     </item>
   </channel>

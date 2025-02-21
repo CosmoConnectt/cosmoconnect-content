@@ -9,7 +9,7 @@
 }
 
 body {
-    background: radial-gradient(circle at center, rgba(13, 19, 40, 1), rgba(0, 0, 0, 1)),
+    background: radial-gradient(circle at center, rgb(0, 0, 0), rgba(0, 0, 0, 1)),
                 url('https://www.transparenttextures.com/patterns/triangular.png'),
                 url('https://cdn.pixabay.com/photo/2016/09/07/22/10/space-1652822_960_720.jpg');
     background-size: cover, auto;
@@ -214,10 +214,10 @@ body {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    background: rgba(0, 27, 58, 0.986); /* Glass effect */
     backdrop-filter: blur(15px);
     border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* Changed shadow color to white */
+    box-shadow: 0px 0px 20px rgb(152, 255, 255); /* Changed shadow color to white */
     
 }
 
@@ -269,8 +269,8 @@ body {
 
 /* Categories */
 .singleCategory {
-    background: rgba(255, 255, 255, 0.2); /* Changed background color to white */
-    color: white; /* Changed color to white */
+    background: rgb(136, 231, 243); /* Changed background color to white */
+    color: rgb(5, 5, 5); /* Changed color to white */
     padding: 5px 12px;
     border-radius: 8px;
     text-decoration: none;
@@ -402,11 +402,11 @@ time {
     align-items: center;
     gap: 15px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1); /* Changed background color to white */
+    background: rgb(0, 0, 0); /* Changed background color to white */
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.4); /* Changed border color to white */
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Changed shadow color to white */
+    border-top: 1px solid rgb(0, 0, 0); /* Changed border color to white */
+    box-shadow: 0px 0px 10px rgb(0, 0, 0); /* Changed shadow color to white */
     text-align: center;
 }
 
@@ -436,8 +436,8 @@ time {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1); /* Changed background color to white */
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3); /* Changed shadow color to white */
+    background: rgb(0, 0, 0); /* Changed background color to white */
+    box-shadow: 0px 0px 5px rgb(0, 0, 0); /* Changed shadow color to white */
     transition: all 0.3s ease-in-out;
 }
 

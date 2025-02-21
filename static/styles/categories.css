@@ -14,31 +14,14 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    animation: pulseBorder 3s infinite alternate, flicker 3s infinite;
+    /* Removed animation */
 }
 
-/* Pulsating border animation */
-@keyframes pulseBorder {
-    0% {
-        border-color: rgba(0, 217, 255, 0.4);
-        box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
-    }
-    100% {
-        border-color: rgba(0, 217, 255, 0.9);
-        box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8);
-    }
-}
+/* Removed pulseBorder keyframes */
 
-/* Flickering glow effect */
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    20% { opacity: 0.8; }
-    40% { opacity: 1; }
-    60% { opacity: 0.6; }
-    80% { opacity: 1; }
-}
+/* Removed flicker keyframes */
 
-/* Scan lines effect */
+/* Removed scan lines effect */
 .listItem::before {
     content: "";
     position: absolute;
@@ -46,20 +29,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        rgba(0, 217, 255, 0.1) 20%, 
-        transparent 40%, 
-        rgba(0, 217, 255, 0.1) 60%, 
-        transparent 80%
-    );
-    background-size: 100% 200%;
-    animation: scanLines 4s linear infinite;
-}
-
-/* Scan lines animation */
-@keyframes scanLines {
-    0% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
+    background: transparent; /* Prevents accidental blocking */
+    z-index: 1; /* Lower than the title */
 }
 
 /* Hover effect for stronger glow */
@@ -118,7 +89,6 @@
 .listItem:hover .listItemImage {
     transform: scale(1.05);
 }
-
 
 /* Description styling */
 .listItemDesc {

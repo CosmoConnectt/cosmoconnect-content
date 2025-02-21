@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Space Fun Facts on CosmoConnect</title>
+    <link>http://localhost:1313/categories/space-fun-facts/</link>
+    <description>Recent content in Space Fun Facts on CosmoConnect</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/space-fun-facts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weird but True: Bizarre Facts About Space</title>
+      <link>http://localhost:1313/posts/weirdbuttruefacts/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/weirdbuttruefacts/</guid>
+      <description>&lt;p&gt;Space is full of weird and wonderful surprises. Despite decades of exploration, scientists continue to discover bizarre phenomena that challenge our understanding of the universe.&lt;/p&gt;&#xA;&lt;p&gt;One of the strangest space facts is that there is a giant cloud of alcohol in space. Sagittarius B2, a massive gas cloud near the center of the Milky Way, contains vast amounts of ethyl alcohol, the same type found in alcoholic beverages. While you couldn’t drink it, it’s a reminder that complex molecules exist beyond Earth.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

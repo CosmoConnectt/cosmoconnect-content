@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Space in Popular Culture on CosmoConnect</title>
+    <link>http://localhost:1313/categories/space-in-popular-culture/</link>
+    <description>Recent content in Space in Popular Culture on CosmoConnect</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/space-in-popular-culture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Space in Movies: How Hollywood Depicts the Cosmos</title>
+      <link>http://localhost:1313/posts/spaceinmovies/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/spaceinmovies/</guid>
+      <description>&lt;p&gt;Space has always been a source of inspiration for filmmakers, leading to some of the most iconic movies in cinematic history. From classic science fiction epics to scientifically accurate portrayals, Hollywood has shaped the way we perceive the universe.&lt;/p&gt;&#xA;&lt;p&gt;One of the earliest space-themed films was &lt;em&gt;A Trip to the Moon&lt;/em&gt; (1902) by Georges Méliès, which portrayed a fantastical journey to the Moon. Later, films like &lt;em&gt;2001: A Space Odyssey&lt;/em&gt; (1968) and &lt;em&gt;Star Wars&lt;/em&gt; (1977) revolutionized the genre by blending stunning visuals with thought-provoking narratives.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

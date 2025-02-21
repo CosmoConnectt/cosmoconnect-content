@@ -1,16 +1,15 @@
 <div class="rightBar">
     <!-- Displaying the list of categories -->
     <div class="categoriesList">
-      <h3>Categories</h3>
-      <ul>
-        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-          <li>
-            <a href="/categories/{{ $name | urlize }}">{{ $name }} ({{ len $taxonomy }})</a>
-          </li>
-        {{ else }}
-          <li>No categories found</li>
-        {{ end }}
-      </ul>
+        <h3>Categories</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <li style="border: 1px solid rgb(0, 5, 34); background-color: rgba(0, 0, 29, 0.849); padding: 5px; margin-bottom: 5px; border-radius: 8px;">
+                <a href="/categories/{{ $name | urlize }}">{{ $name }} ({{ len $taxonomy }})</a>
+            </li>
+            {{ else }}
+            <li>No categories found</li>
+            {{ end }}
+        </ul>
     </div>
-  </div>
-  
+</div>
