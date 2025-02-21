@@ -167,7 +167,7 @@
             </div>
             <div class="categories">
                 {{ range .Site.Taxonomies.categories.ByCount }}
-                <a href="{{ .Page.Permalink }}">
+                <a href="{{ .Page.RelPermalink }}">
                     # {{ .Name }} <small>({{ .Count }})</small>
                 </a>
                 {{ end }}
