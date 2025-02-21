@@ -1,31 +1,196 @@
 {{ define "main" }}
+<head>
+    <link rel="stylesheet" href="/styles/futuristic-style.css">
+    <style>
+        .listItem, .listItemTitle, .listItemDesc, .listItemDetail, .listItemDetail span, .listItemDetail time {
+            font-family: Arial, sans-serif; /* Set font to Arial */
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left-section {
+            width: 20%; /* Left section is 20% of the page */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure categories are at the top and pagination at the bottom */
+            gap: 50px; /* Set gap between Site Title and Categories to 50px */
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            max-height: calc(100vh - 120px); /* Adjust for padding and margin */
+            overflow-y: auto; /* Make it scrollable if required */
+        }
+        .right-section {
+            width: calc(100% - 20% - 70px); /* Adjust for left section width and margin */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: 50px; /* Margin of 50px from all sides */
+            margin-left: calc(20% + 70px); /* Adjust for left section width and margin */
+        }
+        .listItemDesc {
+            position: absolute;
+            bottom: 50px; /* Ensure a gap of 10px above listItemDetail */
+            right: 10px;
+            text-align: right;
+            font-size: 14px; /* Reduce font size by 2 points */
+            padding-left: 50px; /* Apply 50px padding on the left */
+        }
+        .listItemDetail {
+            font-size: 0.50em; /* Set font size for H6 */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            text-align: left;
+            gap: 20px;
+        }
+        .listItemDetail img {
+            width: 20px; /* Increase width by 2 points */
+            height: 20px; /* Increase height by 2 points */
+            border-radius: 50%;
+        }
+        .listItem a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            text-decoration: none;
+        }
+        .listItemDetail .author {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Ensure gap is 10px */
+        }
+        .categories {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px; /* 100px gap between categories and pagination */
+        }
+        .categories a {
+            font-family: Arial, sans-serif; /* Set font to Arial */
+            background: rgba(255, 255, 255, 0.2); /* Changed background color to white */
+            color: white; /* Changed color to white */
+            padding: 5px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        .categories a:hover {
+            background: rgba(255, 255, 255, 0.5); /* Changed background color to white */
+        }
+        .pagination {
+            width: calc(80% - 40px); /* Adjust for left section width and margin */
+            margin: 0 20px; /* Margin of 20px from all sides */
+            overflow-x: hidden; /* Ensure no scroll bar */
+        }
 
-<div class="list-grid">
-    {{ range .Paginator.Pages }}
-    <div class="listItem">
-        <!-- Moved <a> outside <h1> for better clickability -->
-        <a href="{{ .RelPermalink }}" class="listItemTitle">
-            <h1>{{ .Title }}</h1>
-        </a>
-        {{ if .Params.image }}
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="listItemImage" loading="lazy">
-        {{ end }}
-        <p class="listItemDesc">{{ .Params.description }}</p>
-        <div class="listItemDetail">
-            {{ if .Params.avatar }}
-            <img src="{{ .Params.avatar }}" loading="lazy" alt="Author Avatar">
-            {{ end }}
-            <span>
-                {{ range (.GetTerms "authors") }}
-                <a href="{{ .Permalink }}">{{ .Name }}</a>
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .left-section {
+                width: 25%; /* Adjust left section width for tablets */
+                max-height: calc(100vh - 120px); /* Adjust for padding and margin */
+            }
+            .right-section {
+                width: calc(100% - 25% - 70px); /* Adjust right section width for tablets */
+                grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+            }
+        }
+        @media (max-width: 768px) {
+            .left-section {
+                width: 30%; /* Adjust left section width for small tablets */
+                max-height: calc(100vh - 120px); /* Adjust for padding and margin */
+            }
+            .right-section {
+                width: calc(100% - 30% - 70px); /* Adjust right section width for small tablets */
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for small tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .left-section {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                position: static;
+                max-height: 400px;
+                overflow-y: visible;
+            }
+            .right-section {
+                width: 100%;
+                margin-left: 0;
+                grid-template-columns: 1fr; /* 1 column for mobile devices */
+            }
+            .site-title {
+                display: block; /* Show site title */
+            }
+        }
+        @media (min-width: 481px) {
+            .site-title {
+                display: none; /* Hide site title */
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbar = document.querySelector(".navbar");
+            const siteTitle = document.querySelector(".site-title");
+
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 100) {
+                    siteTitle.style.display = "block";
+                } else {
+                    siteTitle.style.display = "none";
+                }
+            });
+        });
+    </script>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0);">
+    {{ partial "navbar.html" . }}
+    <div class="content-wrapper">
+        <div class="left-section">
+            <div class="site-title" style="margin-bottom: 20px; display: none;">
+                <a href="/" style="color: white; text-align: center; text-decoration: none;">
+                    <h1>CosmoConnect</h1>
+                </a>
+            </div>
+            <div class="categories">
+                {{ range .Site.Taxonomies.categories }}
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
                 {{ end }}
-            </span>
-            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+            </div>
+            <div class="pagination-wrapper">
+                {{ template "_internal/pagination.html" . }}
+            </div>
+        </div>
+        <div class="right-section">
+            {{ range .Paginator.Pages }}
+            <div class="listItem" style="width: 250px; height: 300px; background: url('{{ .Params.image }}') no-repeat center center; background-size: cover; border: 2px solid rgba(128, 0, 128, 0.4); box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);">
+                <a href="{{ .RelPermalink }}"></a>
+                <div class="listItemTitle" style="position: absolute; top: 10px; left: 10px;">
+                    <h1 style="color: white; font-size: 24px; text-transform: capitalize;">{{ .Title }}</h1>
+                </div>
+                <p class="listItemDesc">{{ .Params.description }}</p>
+                <div class="listItemDetail">
+                    {{ if .Params.avatar }}
+                    <img src="{{ .Params.avatar }}" loading="lazy" alt="Author Avatar">
+                    {{ end }}
+                    <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                </div>
+            </div>
+            {{ end }} 
         </div>
     </div>
-    {{ end }} 
-</div>
-
-{{ template "_internal/pagination.html" . }}
-
+    {{ partial "footer.html" . }}
+</body>
 {{ end }}

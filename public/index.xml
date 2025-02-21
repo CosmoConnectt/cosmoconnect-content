@@ -1,61 +1,82 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CosmoConnect Content on CosmoConnect</title>
+    <title>CosmoConnect</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in CosmoConnect Content on CosmoConnect</description>
+    <description>Recent content on CosmoConnect</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 17:58:11 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Moon</title>
-      <link>http://localhost:1313/posts/moon/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/moon/</guid>
-      <description>&lt;h1 id=&#34;the-moon-earths-only-natural-satellite&#34;&gt;The Moon: Earth&amp;rsquo;s Only Natural Satellite&lt;/h1&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Moon&lt;/strong&gt; is the Earth&amp;rsquo;s only natural satellite, and it has fascinated humanity for centuries. It plays a significant role in both our planet&amp;rsquo;s environment and in human culture. Below is an overview of the Moon&amp;rsquo;s most important aspects.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-physical-characteristics&#34;&gt;1. &lt;strong&gt;Physical Characteristics&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The Moon is the fifth-largest natural satellite in the Solar System and is approximately 1/4th the size of Earth. It has a diameter of about &lt;strong&gt;3,474 km&lt;/strong&gt;. The Moon&amp;rsquo;s gravity is about &lt;strong&gt;1/6th&lt;/strong&gt; that of Earth&amp;rsquo;s, which is why astronauts appear to weigh much less on the Moon.&lt;/p&gt;</description>
+      <title>Earth</title>
+      <link>http://localhost:1313/posts/earth/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/earth/</guid>
+      <description>&lt;h1 id=&#34;earth&#34;&gt;Earth&lt;/h1&gt;&#xA;&lt;p&gt;Earth is the third planet from the Sun and the only known planet to support life. It has a diverse environment with oceans, mountains, forests, and deserts, all of which are maintained by a delicate balance of atmospheric gases and climate conditions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-earth&#34;&gt;Facts about Earth:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Earth has a breathable atmosphere made of nitrogen, oxygen, and trace gases.&lt;/li&gt;&#xA;&lt;li&gt;The planet&amp;rsquo;s surface is 71% water, with oceans covering most of the surface.&lt;/li&gt;&#xA;&lt;li&gt;Earth has one natural satellite: the Moon.&lt;/li&gt;&#xA;&lt;li&gt;The average surface temperature is around 14°C.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Earth’s magnetic field protects it from harmful solar radiation, and its unique combination of atmosphere and liquid water is essential for life.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Moon1</title>
-      <link>http://localhost:1313/posts/moon1/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/moon1/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <title>Jupiter</title>
+      <link>http://localhost:1313/posts/jupiter/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jupiter/</guid>
+      <description>&lt;h1 id=&#34;jupiter&#34;&gt;Jupiter&lt;/h1&gt;&#xA;&lt;p&gt;Jupiter is the largest planet in the Solar System and the fifth planet from the Sun. It is a gas giant composed primarily of hydrogen and helium, with a thick atmosphere filled with powerful storms, including the famous Great Red Spot.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-jupiter&#34;&gt;Facts about Jupiter:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jupiter is 318 times the mass of Earth.&lt;/li&gt;&#xA;&lt;li&gt;It has at least 79 moons, with the four largest being Io, Europa, Ganymede, and Callisto.&lt;/li&gt;&#xA;&lt;li&gt;Jupiter has the shortest day of any planet, completing a full rotation in about 10 hours.&lt;/li&gt;&#xA;&lt;li&gt;Its Great Red Spot is a massive storm that has been raging for over 300 years.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Jupiter plays a significant role in protecting the inner planets by attracting and deflecting comets and asteroids with its strong gravitational pull.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Moon2</title>
-      <link>http://localhost:1313/posts/moon2/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/moon2/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <title>Mercury</title>
+      <link>http://localhost:1313/posts/mercury/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mercury/</guid>
+      <description>&lt;h1 id=&#34;mercury&#34;&gt;Mercury&lt;/h1&gt;&#xA;&lt;p&gt;Mercury is the closest planet to the Sun and is the smallest planet in the Solar System. It has extreme temperature fluctuations because it has no atmosphere to retain heat.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-mercury&#34;&gt;Facts about Mercury:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Mercury has a surface temperature ranging from -173°C at night to 427°C during the day.&lt;/li&gt;&#xA;&lt;li&gt;It has no moons or rings.&lt;/li&gt;&#xA;&lt;li&gt;A year on Mercury lasts only 88 Earth days, but a day on Mercury lasts 176 Earth days.&lt;/li&gt;&#xA;&lt;li&gt;Mercury has a heavily cratered surface, similar to the Moon.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Despite its proximity to the Sun, Mercury has no atmosphere, making it a hostile environment for life.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Moon3</title>
-      <link>http://localhost:1313/posts/abc/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/abc/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <title>Neptune</title>
+      <link>http://localhost:1313/posts/neptune/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/neptune/</guid>
+      <description>&lt;h1 id=&#34;neptune&#34;&gt;Neptune&lt;/h1&gt;&#xA;&lt;p&gt;Neptune is the eighth and farthest planet from the Sun. It is a gas giant with a deep blue color due to methane in its atmosphere. It has the fastest winds recorded in the Solar System.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-neptune&#34;&gt;Facts about Neptune:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Neptune’s winds can reach speeds of up to 2,100 km/h.&lt;/li&gt;&#xA;&lt;li&gt;It has 14 known moons, with Triton being the largest and having a retrograde orbit.&lt;/li&gt;&#xA;&lt;li&gt;A year on Neptune lasts about 165 Earth years.&lt;/li&gt;&#xA;&lt;li&gt;The planet has a faint ring system that is difficult to observe.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Neptune was the first planet to be discovered using mathematical predictions rather than direct observation.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Moon3</title>
-      <link>http://localhost:1313/posts/abcd/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/abcd/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <title>Saturn</title>
+      <link>http://localhost:1313/posts/saturn/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/saturn/</guid>
+      <description>&lt;h1 id=&#34;saturn&#34;&gt;Saturn&lt;/h1&gt;&#xA;&lt;p&gt;Saturn is the sixth planet from the Sun and the second-largest in the Solar System. It is most famous for its stunning ring system, which is made up of ice and rock particles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-saturn&#34;&gt;Facts about Saturn:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Saturn is composed mostly of hydrogen and helium.&lt;/li&gt;&#xA;&lt;li&gt;It has a vast ring system consisting of thousands of individual rings.&lt;/li&gt;&#xA;&lt;li&gt;Saturn has at least 83 moons, including Titan, which has a thick atmosphere and liquid methane lakes.&lt;/li&gt;&#xA;&lt;li&gt;A year on Saturn takes about 29.5 Earth years.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Saturn&amp;rsquo;s rings are constantly changing due to gravitational interactions with its moons and the Sun.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Moon3</title>
-      <link>http://localhost:1313/posts/abcdef/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/abcdef/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <title>The Asteroid Belt</title>
+      <link>http://localhost:1313/posts/astroidbelt/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/astroidbelt/</guid>
+      <description>&lt;h1 id=&#34;the-asteroid-belt&#34;&gt;The Asteroid Belt&lt;/h1&gt;&#xA;&lt;p&gt;The Asteroid Belt is a region of space located between the orbits of Mars and Jupiter, filled with millions of rocky objects. These objects range in size from tiny dust particles to large asteroids.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-the-asteroid-belt&#34;&gt;Facts about the Asteroid Belt:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The largest asteroid, Ceres, is also classified as a dwarf planet.&lt;/li&gt;&#xA;&lt;li&gt;The belt contains many irregularly shaped asteroids composed of rock, metal, and ice.&lt;/li&gt;&#xA;&lt;li&gt;Some asteroids have their own moons.&lt;/li&gt;&#xA;&lt;li&gt;Scientists believe that the belt is made of leftover material from the formation of the Solar System.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The Asteroid Belt is an important region for studying the early Solar System and potential resources for future space exploration.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Moon3</title>
-      <link>http://localhost:1313/posts/moon3/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/posts/moon3/</guid>
-      <description>&lt;p&gt;Test content&lt;/p&gt;</description>
+      <title>The Solar System</title>
+      <link>http://localhost:1313/posts/thesolarsystem/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/thesolarsystem/</guid>
+      <description>&lt;h1 id=&#34;the-solar-system&#34;&gt;The Solar System&lt;/h1&gt;&#xA;&lt;p&gt;The Solar System is a collection of celestial bodies, including the Sun, eight planets, their moons, and various smaller objects like dwarf planets, comets, and asteroids. All of these objects are bound by gravity, and they orbit the Sun.&lt;/p&gt;&#xA;&lt;p&gt;The Sun is at the center of the Solar System, providing the necessary light and heat to sustain life on Earth. The planets are divided into two categories: the inner planets, which are rocky and include Mercury, Venus, Earth, and Mars; and the outer planets, which are gas giants and include Jupiter, Saturn, Uranus, and Neptune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Sun</title>
+      <link>http://localhost:1313/posts/thesun/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/thesun/</guid>
+      <description>&lt;h1 id=&#34;the-sun&#34;&gt;The Sun&lt;/h1&gt;&#xA;&lt;p&gt;The Sun is a massive ball of hot, glowing gas that is the center of the Solar System. It is composed primarily of hydrogen and helium and generates energy through nuclear fusion in its core. This process produces the light and heat that make life on Earth possible.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-the-sun&#34;&gt;Facts about the Sun:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The Sun accounts for 99.86% of the total mass of the Solar System.&lt;/li&gt;&#xA;&lt;li&gt;It is approximately 4.6 billion years old and is expected to remain stable for another 5 billion years.&lt;/li&gt;&#xA;&lt;li&gt;The temperature at the Sun&amp;rsquo;s core is about 15 million degrees Celsius.&lt;/li&gt;&#xA;&lt;li&gt;The Sun&amp;rsquo;s gravity is strong enough to keep the entire Solar System in orbit.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The Sun plays a crucial role in weather patterns, climate, and the growth of plants on Earth, among other things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Uranus</title>
+      <link>http://localhost:1313/posts/uranus/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uranus/</guid>
+      <description>&lt;h1 id=&#34;uranus&#34;&gt;Uranus&lt;/h1&gt;&#xA;&lt;p&gt;Uranus is the seventh planet from the Sun and is classified as an ice giant due to its composition of water, ammonia, and methane. It is unique because it rotates on its side.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-uranus&#34;&gt;Facts about Uranus:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Uranus is tilted at an angle of 98 degrees, causing extreme seasons.&lt;/li&gt;&#xA;&lt;li&gt;It has a faint ring system made of dark particles.&lt;/li&gt;&#xA;&lt;li&gt;The planet has 27 known moons, named after characters from Shakespearean plays.&lt;/li&gt;&#xA;&lt;li&gt;Uranus appears blue due to methane in its atmosphere, which absorbs red light.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Uranus is one of the coldest planets in the Solar System, with temperatures dropping as low as -224°C.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Venus</title>
+      <link>http://localhost:1313/posts/venus/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/venus/</guid>
+      <description>&lt;h1 id=&#34;venus&#34;&gt;Venus&lt;/h1&gt;&#xA;&lt;p&gt;Venus is the second planet from the Sun and is often called Earth&amp;rsquo;s &amp;ldquo;sister planet&amp;rdquo; because of its similar size and composition. However, its atmosphere is toxic and its surface is extremely hot, making it inhospitable to life.&lt;/p&gt;&#xA;&lt;h2 id=&#34;facts-about-venus&#34;&gt;Facts about Venus:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Venus has an atmosphere composed mostly of carbon dioxide, with clouds of sulfuric acid.&lt;/li&gt;&#xA;&lt;li&gt;Surface temperatures on Venus can reach up to 465°C, hotter than Mercury despite being farther from the Sun.&lt;/li&gt;&#xA;&lt;li&gt;A day on Venus is longer than a year; it takes 243 Earth days to complete one rotation but only 225 Earth days to orbit the Sun.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Venus is often seen as one of the most hostile planets in the Solar System.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

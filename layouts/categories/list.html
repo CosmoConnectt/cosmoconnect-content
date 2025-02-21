@@ -1,8 +1,11 @@
 {{ define "main" }} 
-  {{ if eq .RelPermalink "/categories/"}} 
-    <!-- Load categories.css -->
+<head>
     <link rel="stylesheet" href="{{ "/styles/categories.css" | relURL }}">
-
+    <link rel="stylesheet" href="/styles/futuristic-style.css">
+</head>
+<body>
+    {{ partial "navbar.html" . }}
+    {{ if eq .RelPermalink "/categories/"}} 
     <div class="categoriesList">
       {{ range $.Site.Taxonomies.categories.ByCount }}
         <a href="/categories/{{ .Name }}">
@@ -10,47 +13,38 @@
         </a>
       {{end}}
     </div>
-  {{ else }}
-    <!-- Load categories.css for post lists too -->
-    <link rel="stylesheet" href="{{ "css/categories.css" | relURL }}">
-
-    <div class="list">
+    {{ else }}
+    <div class="list-grid">
       {{ range .Paginator.Pages }}
         <div class="listItem">
-          <img
-            src={{ .Params.image }}
-            alt="{{ .Title }}"
-            class="listItemImage"
-            loading="lazy"
-          />
-          <div class="listItemTexts">
-            <h1 class="listItemTitle">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h1>
-            <p class="listItemDesc">{{ .Params.description }}</p>
-            <div class="listItemDetail">
-              <img
-                src="{{ .Params.avatar }}"
-                loading="lazy"
-                alt=""
-                class="listItemAvatar"
-              />
-              <span>
-                {{ range (.GetTerms "authors") }}
-                  <a href="{{ .Permalink }}">{{ .Name }}</a>
-                {{end}}
-              </span>
-              <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
-            </div>
-            <div class="listItemCategories">
-              {{ range (.GetTerms "categories") }}
-                <a class="listItemCategory" href="{{ .Permalink }}">{{ .Name }}</a>
+          <a href="{{ .RelPermalink }}" class="listItemTitle">
+            <h1>{{ .Title }}</h1>
+          </a>
+          {{ if .Params.image }}
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="listItemImage" loading="lazy">
+          {{ end }}
+          <p class="listItemDesc">{{ .Params.description }}</p>
+          <div class="listItemDetail">
+            {{ if .Params.avatar }}
+            <img src="{{ .Params.avatar }}" loading="lazy" alt="Author Avatar">
+            {{ end }}
+            <span>
+              {{ range (.GetTerms "authors") }}
+              <a href="{{ .Permalink }}">{{ .Name }}</a>
               {{ end }}
-            </div>
+            </span>
+            <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+          </div>
+          <div class="listItemCategories">
+            {{ range (.GetTerms "categories") }}
+            <a class="listItemCategory" href="{{ .Permalink }}">{{ .Name }}</a>
+            {{ end }}
           </div>
         </div>
       {{ end }} 
       {{ template "_internal/pagination.html" . }}
     </div>
-  {{ end }} 
+    {{ end }} 
+    {{ partial "footer.html" . }}
+</body>
 {{ end }}

@@ -5,10 +5,9 @@
     --bgSoft: rgba(31, 48, 80, 0.3); /* Glassmorphism effect */
     --text: #dee4eb;
     --textSoft: #8eb4e6;
-    --neon: #00d9ff; /* Neon blue */
-    --glow: rgba(0, 217, 255, 0.8);
-  }
-  
+    --neon: white; /* Changed neon blue to white */
+}
+
 body {
     background: radial-gradient(circle at center, rgba(13, 19, 40, 1), rgba(0, 0, 0, 1)),
                 url('https://www.transparenttextures.com/patterns/triangular.png'),
@@ -16,14 +15,10 @@ body {
     background-size: cover, auto;
     background-position: center, center;
     background-attachment: fixed, scroll;
-    animation: starfield 100s linear infinite, nebulaPulse 5s ease-in-out infinite;
+    
 }
 
-@keyframes nebulaPulse {
-    0% { background-color: rgba(13, 19, 40, 1); }
-    50% { background-color: rgba(8, 8, 22, 0.7); }
-    100% { background-color: rgba(13, 19, 40, 1); }
-}
+
 
 @keyframes starfield {
     from {
@@ -73,40 +68,19 @@ body {
     padding: 20px;
 }
 .listItem {
-    background: rgba(0, 217, 255, 0.1); /* Almost transparent neon cyan */
+    background: rgba(0, 0, 0, 0); /* Almost transparent neon cyan */
     backdrop-filter: blur(10px); /* Glass effect */
     padding: 15px;
     border-radius: 10px;
-    border: 2px solid rgba(0, 217, 255, 0.4); /* Soft neon border */
-    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    border: 2px solid white; /* Changed border color to white */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0); /* Changed shadow color to white */
     text-align: center;
     position: relative;
     overflow: hidden;
-    animation: pulseBorder 3s infinite alternate, flicker 3s infinite;
+    transition: all 0.3s ease-in-out; /* Removed animation */
 }
 
-/* Pulsating border animation */
-@keyframes pulseBorder {
-    0% {
-        border-color: rgba(0, 217, 255, 0.4);
-        box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
-    }
-    100% {
-        border-color: rgba(0, 217, 255, 0.9);
-        box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8);
-    }
-}
-
-/* Flickering glow effect */
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    20% { opacity: 0.8; }
-    40% { opacity: 1; }
-    60% { opacity: 0.6; }
-    80% { opacity: 1; }
-}
-
-/* Scan lines effect */
+/* Removed scan lines effect */
 .listItem::before {
     content: "";
     position: absolute;
@@ -114,20 +88,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        rgba(0, 217, 255, 0.1) 20%, 
-        transparent 40%, 
-        rgba(0, 217, 255, 0.1) 60%, 
-        transparent 80%
-    );
-    background-size: 100% 200%;
-    animation: scanLines 4s linear infinite;
-}
-
-/* Scan lines animation */
-@keyframes scanLines {
-    0% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
+    background: transparent; /* Prevents accidental blocking */
+    z-index: 1; /* Lower than the title */
 }
 
 /* Hover effect for stronger glow */
@@ -147,17 +109,17 @@ body {
 .listItemTitle a {
     display: inline-block; /* Ensures proper clickability */
     width: 100%; /* Makes the title take full width */
-    color: var(--neon); /* Always neon cyan */
+    color: white; /* Changed color to white */
     text-decoration: none;
     font-size: 22px;
     font-weight: bold;
     padding: 5px 0; /* Increases click area */
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .listItemTitle a:hover {
-    color: var(--neon);
-    text-shadow: 0px 0px 10px var(--glow);
+    color: white; /* Changed hover color to white */
+    /* Removed text-shadow */
 }
 
 /* Ensure nothing overlaps the title */
@@ -190,7 +152,7 @@ body {
 
 /* Description styling */
 .listItemDesc {
-    color: #b5effd;
+    color: white; /* Changed color to white */
     font-size: 16px;
     line-height: 1.4;
 }
@@ -210,8 +172,8 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--neon);
-    box-shadow: 0px 0px 5px rgba(0, 217, 255, 0.5);
+    border: 2px solid white; /* Changed border color to white */
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0); /* Changed shadow color to white */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -222,7 +184,7 @@ body {
 
 /* Author name styling */
 .listItemDetail span {
-    color: #00aaff;
+    color: white; /* Changed color to white */
     font-size: 14px;
     font-weight: bold;
 }
@@ -232,17 +194,17 @@ body {
   /* BUTTONS */
   button {
     background-color: transparent;
-    color: var(--neon);
-    border: 1px solid var(--neon);
+    color: white; /* Changed color to white */
+    border: 1px solid white; /* Changed border color to white */
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }
   
   button:hover {
-    background-color: var(--neon);
+    background-color: white; /* Changed background color to white */
     color: var(--bg);
-    box-shadow: 0px 0px 15px var(--glow);
+    /* Removed box-shadow */
   }
   
 
@@ -252,18 +214,13 @@ body {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background: rgba(0, 217, 255, 0.1); /* Glass effect */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
     backdrop-filter: blur(15px);
     border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.5);
-    animation: glowPulse 3s infinite alternate;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* Changed shadow color to white */
+    
 }
 
-/* Glowing pulse effect */
-@keyframes glowPulse {
-    0% { box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.4); }
-    100% { box-shadow: 0px 0px 25px rgba(0, 217, 255, 0.9); }
-}
 
 /* Post Header */
 .singleHead {
@@ -272,21 +229,21 @@ body {
     align-items: center;
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgba(0, 217, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Changed border color to white */
 }
 
 /* Post Title */
 .singleHeadTitle {
     font-size: 32px;
-    color: #00d9ff;
-    text-shadow: 0px 0px 15px rgba(0, 217, 255, 0.8);
+    color: white; /* Changed color to white */
+    /* Removed text-shadow */
     margin-bottom: 10px;
 }
 
 /* Post Description */
 .singleHeadDesc {
     font-size: 18px;
-    color: #b5effd;
+    color: white; /* Changed color to white */
     font-style: italic;
     max-width: 80%;
     margin: 0 auto 15px;
@@ -298,7 +255,7 @@ body {
     align-items: center;
     gap: 15px;
     font-size: 16px;
-    color: #8eb4e6;
+    color: white; /* Changed color to white */
     margin-bottom: 10px;
 }
 
@@ -306,14 +263,14 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid rgba(0, 217, 255, 0.7);
-    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Changed border color to white */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); /* Changed shadow color to white */
 }
 
 /* Categories */
 .singleCategory {
-    background: rgba(0, 217, 255, 0.2);
-    color: #00aaff;
+    background: rgba(255, 255, 255, 0.2); /* Changed background color to white */
+    color: white; /* Changed color to white */
     padding: 5px 12px;
     border-radius: 8px;
     text-decoration: none;
@@ -321,14 +278,14 @@ body {
 }
 
 .singleCategory:hover {
-    background: rgba(0, 217, 255, 0.5);
-    box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.7);
+    background: rgba(255, 255, 255, 0.5); /* Changed background color to white */
+    /* Removed box-shadow */
 }
 
 /* Date */
 time {
     font-size: 14px;
-    color: #8eb4e6;
+    color: white; /* Changed color to white */
     opacity: 0.8;
 }
 
@@ -339,7 +296,7 @@ time {
     object-fit: cover;
     border-radius: 12px;
     margin-top: 20px;
-    box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.7);
+    /* Removed box-shadow */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -359,21 +316,21 @@ time {
     flex: 3;
     font-size: 18px;
     line-height: 1.8;
-    color: #dee4eb;
+    color: white; /* Changed color to white */
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.4);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); /* Changed shadow color to white */
 }
 
 /* Sidebar */
 .singleRightBar {
     flex: 1;
-    background: rgba(0, 217, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05); /* Changed background color to white */
     backdrop-filter: blur(8px);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 217, 255, 0.3);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3); /* Changed shadow color to white */
 }
 
 /* Responsive Design */
@@ -405,11 +362,13 @@ time {
     justify-content: center;
     gap: 10px;
     padding: 10px;
-    background: rgba(0, 217, 255, 0.1);
+    size-adjust: auto;
+    background: rgba(255, 255, 255, 0); /* Changed background color to white */
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 1px solid rgba(0, 217, 255, 0.4);
-    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0); /* Changed border color to white */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0); /* Changed shadow color to white */
+    overflow-x: hidden;
 }
 
 .pagination a, .pagination span {
@@ -419,29 +378,22 @@ time {
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     position: relative;
+    overflow-x: hidden;
 }
 
 .pagination a:hover {
-    color: var(--neon);
-    text-shadow: 0px 0px 10px var(--glow);
+    color: white; /* Changed hover color to white */
+    /* Removed text-shadow */
 }
 
 .pagination .active {
-    color: var(--neon);
+    color: white; /* Changed color to white */
     font-weight: bold;
-    text-shadow: 0px 0px 15px var(--glow);
-    border-bottom: 2px solid var(--neon);
+    /* Removed text-shadow */
+    border-bottom: 2px solid white; /* Changed border color to white */
 }
 
-/* Pulsating Effect */
-@keyframes pulsePagination {
-    0% { text-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5); }
-    100% { text-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8); }
-}
-
-.pagination .active {
-    animation: pulsePagination 1.5s infinite alternate;
-}
+/* Removed pulsePagination keyframes */
 
 
 .footer {
@@ -450,11 +402,11 @@ time {
     align-items: center;
     gap: 15px;
     padding: 15px;
-    background: rgba(0, 217, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* Changed background color to white */
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border-top: 1px solid rgba(0, 217, 255, 0.4);
-    box-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.4); /* Changed border color to white */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Changed shadow color to white */
     text-align: center;
 }
 
@@ -467,8 +419,8 @@ time {
 }
 
 .footer a:hover {
-    color: var(--neon);
-    text-shadow: 0px 0px 10px var(--glow);
+    color: white; /* Changed hover color to white */
+    /* Removed text-shadow */
 }
 
 /* Social Icons */
@@ -484,29 +436,22 @@ time {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: rgba(0, 217, 255, 0.1);
-    box-shadow: 0px 0px 5px rgba(0, 217, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1); /* Changed background color to white */
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3); /* Changed shadow color to white */
     transition: all 0.3s ease-in-out;
 }
 
 .footer .social-icons a:hover {
-    background: var(--neon);
-    box-shadow: 0px 0px 15px var(--glow);
+    background: white; /* Changed background color to white */
+    /* Removed box-shadow */
 }
 
-/* Pulsating Animation */
-@keyframes pulseFooter {
-    0% { text-shadow: 0px 0px 10px rgba(0, 217, 255, 0.5); }
-    100% { text-shadow: 0px 0px 20px rgba(0, 217, 255, 0.8); }
-}
+/* Removed pulseFooter keyframes */
 
-.footer a.active {
-    animation: pulseFooter 1.5s infinite alternate;
-}
 
   
   /* GSAP READY CLASSES */
-  .hidden {
+  /* .hidden {
     opacity: 0;
     transform: translateY(50px);
   }
@@ -521,7 +466,7 @@ time {
     .list {
       grid-template-columns: repeat(1, 1fr);
     }
-  }
+  } */
 
 #solar-system {
     width: 100vw;

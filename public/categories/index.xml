@@ -6,41 +6,20 @@
     <description>Recent content in Categories on CosmoConnect</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 17:58:11 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>General</title>
       <link>http://localhost:1313/categories/general/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/general/</guid>
       <description></description>
     </item>
     <item>
-      <title>Kids</title>
-      <link>http://localhost:1313/categories/kids/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/categories/kids/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Moon</title>
-      <link>http://localhost:1313/categories/moon/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/categories/moon/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Solar System</title>
-      <link>http://localhost:1313/categories/solar-system/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/categories/solar-system/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Space</title>
-      <link>http://localhost:1313/categories/space/</link>
-      <pubDate>Sat, 01 Feb 2025 17:58:11 +0530</pubDate>
-      <guid>http://localhost:1313/categories/space/</guid>
+      <title>The Solar System</title>
+      <link>http://localhost:1313/categories/the-solar-system/</link>
+      <pubDate>Tue, 18 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/the-solar-system/</guid>
       <description></description>
     </item>
   </channel>

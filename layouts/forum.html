@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmoConnect Forum</title>
+    <link rel="stylesheet" href="/styles/forum.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+</head>
+<body>
+    {{ define "main" }}
+    <div class="forum-container">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div id="forum-content" style="display: none;">
+            <h1>Welcome to the CosmoConnect Forum</h1>
+            <form id="post-form">
+                <textarea id="post-content" placeholder="Share your thoughts..."></textarea>
+                <button type="submit">Post</button>
+            </form>
+            <div id="posts">
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">John Doe</span>
+                        <span class="post-date">October 1, 2023</span>
+                    </div>
+                    <div class="post-content">
+                        This is a sample post content. Welcome to the CosmoConnect Forum!
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <span class="post-author">Jane Smith</span>
+                        <span class="post-date">October 2, 2023</span>
+                    </div>
+                    <div class="post-content">
+                        Another sample post. Feel free to share your thoughts and ideas here.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            document.getElementById('forum-content').style.display = 'block';
+        }
+
+        document.getElementById('post-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var postContent = document.getElementById('post-content').value;
+            var postElement = document.createElement('div');
+            postElement.className = 'post';
+            postElement.innerHTML = `
+                <div class="post-header">
+                    <span class="post-author">You</span>
+                    <span class="post-date">${new Date().toLocaleDateString()}</span>
+                </div>
+                <div class="post-content">${postContent}</div>
+            `;
+            document.getElementById('posts').appendChild(postElement);
+            document.getElementById('post-content').value = '';
+        });
+    </script>
+    {{ end }}
+</body>
+</html>
